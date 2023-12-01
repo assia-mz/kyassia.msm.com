@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Include jQuery from CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <a href="test-page.html" class="w3-bar-item w3-button">Commander</a>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class=".w3-center w3-hide-small">
+            
+        </div>
+
+        <div class="w3-right w3-hide-small">
+            <a href="homepage.html#projects" class="w3-bar-item w3-button">Articles</a>
+            <a href="homepage.html#about" class="w3-bar-item w3-button">Qui sommes nous ?</a>
+            <a href="homepage.html#contact" class="w3-bar-item w3-button">Contact</a>
+        </div>
+        </div>
+    </div>
+    <main class="container">
+        <!-- Left Column / Headphones Image -->
+        <div class="left-column">
+            <!-- Images des produits -->
+            <img class="product-image active" data-image="black" src="data-image/black.jpg" alt="">
+            <img class="product-image" data-image="blue" src="data-image/blue.jpg" alt="">
+            <img class="product-image" data-image="red" src="data-image/red.jpg" alt="">
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <!-- Description du produit -->
+            <form id="product-form">
+                <div class="product-description">
+                    <span>Étagère</span>
+                    <h1>Étagère sur mesure</h1>
+                    <div class="dimension">
+                        <label for="length">Longueur:</label>
+                        <input class="vol" type="range" id="length" name="length" min="0" max="50">
+                        <span id="length-value" class="dimension-value">25</span>
+                        <br>
+                        <label for="width">Largeur:</label>
+                        <input class="vol" type="range" id="width" name="width" min="0" max="50">
+                        <span id="width-value" class="dimension-value">25</span>
+                        <br>
+                    </div>                  
+                </div>
+
+                <!-- Configuration du produit -->
+                <div class="product-configuration">
+                    <!-- Couleur du produit -->
+                    <div class="product-color">
+                        <span> Couleur</span>
+                        <div class="color-choose">
+                            <div>
+                                <input data-image="red" type="radio" id="red" name="color" value="red" checked>
+                                <label for="red"><span></span></label>
+                            </div>
+                            <div>
+                                <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+                                <label for="blue"><span></span></label>
+                            </div>
+                            <div>
+                                <input data-image="black" type="radio" id="black" name="color" value="black">
+                                <label for="black"><span></span></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Épaisseur -->
+                    <div class="cable-config">
+                        <span> Épaisseur </span>
+                        <div class="cable-choose">
+                            <button type="button" data-width="4cm">4cm</button>
+                            <button type="button" data-width="8cm">8cm</button>
+                            <button type="button" data-width="10cm">10cm</button>
+                        </div>
+                        <a href="#">Informations concernant les matériaux</a>
+                    </div>
+                </div>
+
+                <!-- Prix du produit -->
+                <div class="product-price">
+                    <span>250€</span>
+                    <a href="#" class="cart-btn" onclick="validateForm('add-to-cart')">Ajouter au panier</a> <br>
+                    <a href="#" class="cart2-btn" onclick="validateForm('order-and-pay')">Commander et payer</a>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
